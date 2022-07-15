@@ -1,0 +1,29 @@
+version: '3.2'
+
+volumes:
+  postgres_data:
+    driver: local
+
+services:
+  mysql-bug-tracker:
+    image: mysql:latest
+    environment:
+      MYSQL_ROOT_PASSWORD: password
+      MYSQL_DATABASE: bugtracker
+      MYSQL_USER: sa
+      MYSQL_PASSWORD: password
+    ports:
+      - 3306:3306
+    volumes:
+      - ./database:/docker-entrypoint-initdb.d:rw
+      - /opt/mysql_data_bug_tracker:/var/lib/mysql
+  bug-tracker:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    labels:
+      container-name: bug-tracker
+    ports:
+      - 7005:7005
+    depends_on:
+      - mysql-bug-tracker
