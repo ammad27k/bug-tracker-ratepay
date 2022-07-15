@@ -1,0 +1,223 @@
+{
+	"info": {
+		"_postman_id": "eb086aea-6d49-4d20-ba6c-c5e93befd7be",
+		"name": "Ratepay",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "SignUp",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"userName\":\"aarshad\",\n    \"userPassword\" : \"Dell4321@!\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:7005/api/signup/user",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7005",
+					"path": [
+						"api",
+						"signup",
+						"user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"userName\":\"aarshad\",\n    \"password\" : \"Dell4321@!\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:7005/api/login/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7005",
+					"path": [
+						"api",
+						"login",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Projects",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhYXJzaGFkIiwiZXhwIjoxNjU3Nzk3ODkzLCJpYXQiOjE2NTc3Nzk4OTN9.2hRe2JFv4WIIn5sQUIxSl3K3LuGidC5ZEtLloKj78Gno8sWQ24SIEZF8k47df-htQNZqpShzkHCFT8CeD7tzLA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\":\"Ratepay\",\n    \"memberIds\" : [1, 2, 3]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:7005/api/bug-tracker/project",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7005",
+					"path": [
+						"api",
+						"bug-tracker",
+						"project"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Bug",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhYXJzaGFkIiwiZXhwIjoxNjU3Nzk3ODkzLCJpYXQiOjE2NTc3Nzk4OTN9.2hRe2JFv4WIIn5sQUIxSl3K3LuGidC5ZEtLloKj78Gno8sWQ24SIEZF8k47df-htQNZqpShzkHCFT8CeD7tzLA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"title\": \"Invalid Argument\",\n    \"description\": \"Invalid Argument\",\n    \"priority\": \"HIGH\",\n    \"projectId\" : 1,\n    \n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:7005/api/bug-tracker/bug/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7005",
+					"path": [
+						"api",
+						"bug-tracker",
+						"bug",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create note",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhYXJzaGFkIiwiZXhwIjoxNjU3Nzk3ODkzLCJpYXQiOjE2NTc3Nzk4OTN9.2hRe2JFv4WIIn5sQUIxSl3K3LuGidC5ZEtLloKj78Gno8sWQ24SIEZF8k47df-htQNZqpShzkHCFT8CeD7tzLA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"title\": \"Invalid Argument\",\n    \"description\": \"Invalid Argument\",\n    \"priority\": \"HIGH\",\n    \"projectId\" : 1,\n    \n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:7005/api/bug-tracker/note/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7005",
+					"path": [
+						"api",
+						"bug-tracker",
+						"note",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Project",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhYXJzaGFkIiwiZXhwIjoxNjU3Nzk3ODkzLCJpYXQiOjE2NTc3Nzk4OTN9.2hRe2JFv4WIIn5sQUIxSl3K3LuGidC5ZEtLloKj78Gno8sWQ24SIEZF8k47df-htQNZqpShzkHCFT8CeD7tzLA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:7005/api/bug-tracker/project/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7005",
+					"path": [
+						"api",
+						"bug-tracker",
+						"project",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
